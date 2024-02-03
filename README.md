@@ -34,6 +34,24 @@ Ao criar um Contato ele pode ser qualificado com um conjunto de campos padrão, 
 | facebook      | string | Não         | facebook.com        |
 | tags          | array  | Não         | ['tag1', 'tag2']    |
 
+# Conversão
+O RD Station Marketing considera o valor do atributo `conversion_identifier` como identificador do evento customizado. Esse evento é registrado sempre que ocorre uma conversão.
+
+* Principal
+
+| Campo       | Tipo   | Obrigatório | Exemplo         |
+|-------------|--------|-------------|-----------------|
+| eventType   | string | Sim         | CONVERSION      |
+| eventFamily | string | Sim         | CDP             |
+| payload     | array  | Sim         | `PayloadObject` |
+
+
+* PayloadObject
+
+| Campo                | Tipo   | Obrigatório | Exemplo             |
+|----------------------|--------|-------------|---------------------|
+| conversionIdentifier | string | Sim         | Conversão exemplo   |
+| email                | string | Sim         | exemplo@exemplo.com |
 
 # Exemplos
 ## 1. Contato
@@ -88,4 +106,27 @@ $request = (new ContactRequest())
     ->setEmail('email@email.com');
 
 $response = (new Contact())->find($request);
+```
+
+## 2. Conversão
+- ### Criar
+```php
+<?php
+require_once '../vendor/autoload.php';
+
+use MatheusHack\RdStation\Conversion;
+use MatheusHack\RdStation\Requests\ConversionRequest;
+use MatheusHack\RdStation\Requests\ConversionPayloadRequest;
+
+$payload = (new ConversionPayloadRequest())
+    ->setConversionIdentifler('Conversão exemplo')
+    ->setEmail('email@email.com');
+
+$request = (new ConversionRequest())
+    ->setEventType('CONVERSION')
+    ->setEventFamily('CDP')
+    ->setPayload($payload);
+
+$response = (new Conversion())
+    ->create($request);
 ```
