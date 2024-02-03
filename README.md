@@ -6,13 +6,63 @@
 
 Projeto em Laravel para integração módulo de marketing do RD Station.
 
-## Instalação
-#### Composer
+# Instalação
+### Composer
 ```
 "matheushack/rd-station": "dev-master"
 ```
 
-## Exemplos
+# Exemplos
+## 1. Contato
+   - ### Criar
+```php
+<?php
+require_once '../vendor/autoload.php';
+
+use MatheusHack\RdStation\Contact;
+use MatheusHack\RdStation\Requests\ContactRequest;
+
+$request = (new ContactRequest())
+    ->setEmail('email@email.com');
+
+$response = (new Contact())
+    ->create($request);
 ```
-https://github.com/matheushack/rd-station/tree/master/examples
+   - ### Editar
+```php
+<?php
+require_once '../vendor/autoload.php';
+
+use MatheusHack\RdStation\Contact;
+use MatheusHack\RdStation\Requests\ContactRequest;
+
+$request = (new ContactRequest())
+    ->setEmail('email@email.com')
+    ->setName('Example')
+    ->setJobTitle('Developer')
+    ->setBirthDate('1992-12-14')
+    ->setBio('Bio example')
+    ->setWebsite('example.com.br')
+    ->setCity('São Paulo')
+    ->setState('SP')
+    ->setCountry('Brasil')
+    ->setTags([
+        'teste',
+    ]);
+
+$response = (new Contact())
+    ->update($request);
+```
+   - ### Procurar
+```php
+<?php
+require_once '../vendor/autoload.php';
+
+use MatheusHack\RdStation\Contact;
+use MatheusHack\RdStation\Requests\ContactRequest;
+
+$request = (new ContactRequest())
+    ->setEmail('email@email.com');
+
+$response = (new Contact())->find($request);
 ```
