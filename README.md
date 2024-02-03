@@ -11,7 +11,7 @@ composer required matheushack/rd-station
 ```
 ou
 ```
-"matheushack/rd-station": "^1.1.3"
+"matheushack/rd-station": "^1.0"
 ```
 
 
