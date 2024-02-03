@@ -2,8 +2,6 @@
     "name": "matheushack/rd-station",
     "description": "Integration RD Station Marketing",
     "license": "MIT",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "authors": [
         {
             "name": "Matheus Hack",
