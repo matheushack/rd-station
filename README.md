@@ -12,6 +12,29 @@ Projeto em Laravel para integração módulo de marketing do RD Station.
 "matheushack/rd-station": "dev-main"
 ```
 
+# Contato
+No RD Station todos os registros de pessoas são referidos como Contatos, independentemente de serem classificados como Leads, Leads Qualificados ou Clientes a partir de uma perspectiva de vendas.
+
+Ao criar um Contato ele pode ser qualificado com um conjunto de campos padrão, como email, nome, cargo, empresa, cidade, estado, etc.. O campo padrão chave de identificação dos contatos dentro do RD Station é o "email" deste Contato, que sempre será único.
+
+| Campo         | Tipo   | Obrigatório | Exemplo             |
+|---------------|--------|-------------|---------------------|
+| name          | string | Não         | Matheus Silva       |
+| email         | string | Sim         | exemplo@exemplo.com |
+| jobTitle      | string | Não         | Developer           |
+| birthDate     | string | Não         | 1992-12-12          |
+| bio           | string | Não         | Bio do usuário      |
+| website       | string | Não         | exemplo.com.br      |
+| personalPhone | string | Não         | +5511999999999      |
+| mobilePhone   | string | Não         | +5511999999999      |
+| city          | string | Não         | São Paulo           |
+| state         | string | Não         | SP                  |
+| country       | string | Não         | Brasil              |
+| twitter       | string | Não         | twitter.com         |
+| facebook      | string | Não         | facebook.com        |
+| tags          | array  | Não         | ['tag1', 'tag2']    |
+
+
 # Exemplos
 ## 1. Contato
    - ### Criar
