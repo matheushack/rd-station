@@ -1,5 +1,7 @@
 <?php
 return [
+    'enabled' => false,
+    'sandbox' => true,
     'auth' => [
         'client_id' => env('RD_STATION_CLIENT_ID'),
         'client_secret' => env('RD_STATION_CLIENT_SECRET'),

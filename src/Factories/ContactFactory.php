@@ -16,7 +16,7 @@ class ContactFactory
      */
     public function make(ContactRequest $request)
     {
-        return [
+        return array_filter([
             'name' => $request->getName(),
             'email' => $request->getEmail(),
             'job_title' => $request->getJobTitle(),
@@ -33,7 +33,7 @@ class ContactFactory
             'linkedin' => $request->getLinkedin(),
             'tags' => $request->getTags(),
             'legal_bases' => $this->makeLegalBases($request->getLegalBases()),
-        ];
+        ]);
     }
 
     /**

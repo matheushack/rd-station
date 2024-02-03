@@ -86,6 +86,9 @@ class ContactService extends BaseService
                 ));
             }
 
+            $request->setUuid('')
+                ->setEmail('');
+
             return $this->execute($endpoint, 'PATCH', (new ContactFactory())->make($request));
         } catch (\Exception $e) {
             return (new GenericResponse)

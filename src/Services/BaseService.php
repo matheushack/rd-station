@@ -151,9 +151,6 @@ class BaseService extends Client
             Cache::set('token_authorize_rd_station', $body->access_token, $body->expires_in);
             return $body->access_token;
         } catch (\Exception $e) {
-            echo "<pre>";
-            var_dump($e);
-            exit;
             return false;
         }
     }
