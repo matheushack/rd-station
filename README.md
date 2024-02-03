@@ -9,7 +9,7 @@ Projeto em Laravel para integração módulo de marketing do RD Station.
 # Instalação
 ### Composer
 ```
-"matheushack/rd-station": "dev-master"
+"matheushack/rd-station": "dev-main"
 ```
 
 # Exemplos
