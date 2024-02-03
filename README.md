@@ -1,6 +1,4 @@
 # Laravel RD Station Marketing
-[![PHP Version Require](http://poser.pugx.org/matheushack/rd-station/require/php)](https://packagist.org/packages/matheushack/rd-station)
-[![Latest Stable Version](http://poser.pugx.org/matheushack/rd-station/v)](https://packagist.org/packages/matheushack/rd-station)
 [![Total Downloads](https://poser.pugx.org/matheushack/rd-station/downloads)](https://packagist.org/packages/matheushack/rd-station)
 [![License](https://poser.pugx.org/matheushack/rd-station/license)](https://packagist.org/packages/matheushack/rd-station)
 
@@ -9,8 +7,13 @@ Projeto em Laravel para integração módulo de marketing do RD Station.
 # Instalação
 ### Composer
 ```
-"matheushack/rd-station": "dev-main"
+composer required matheushack/rd-station
 ```
+ou
+```
+"matheushack/rd-station": "^1.1.3"
+```
+
 
 # Contato
 No RD Station todos os registros de pessoas são referidos como Contatos, independentemente de serem classificados como Leads, Leads Qualificados ou Clientes a partir de uma perspectiva de vendas.
