@@ -1,0 +1,30 @@
+{
+    "name": "matheushack/rd-station",
+    "description": "Integration RD Station Marketing",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Matheus Hack",
+            "email": "matheushack90@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^10.43",
+        "guzzlehttp/guzzle": "^7.8",
+        "illuminate/config": "^10.43"
+    },
+    "autoload": {
+        "psr-4": {
+            "MatheusHack\\RdStation\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MatheusHack\\RdStation\\Providers\\RdStationServiceProvider"
+            ]
+        }
+    }
+}
